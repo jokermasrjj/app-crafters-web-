@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا - ProCode</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="codeRainCanvas" aria-hidden="true"></canvas>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="index.html" class="logo" id="contactLogo">Pro<span>Code</span></a>
+      <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="index.html#services">الخدمات</a>
+        <a href="index.html#portfolio">الأعمال</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container contact-page-grid">
+      <div class="card">
+        <h2>راسلنا الآن</h2>
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="name" placeholder="الاسم" required />
+          <input type="tel" id="phone" placeholder="رقم الهاتف" required />
+          <textarea id="message" placeholder="اكتب تفاصيل مشروعك" required></textarea>
+          <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+        </form>
+        <p id="formMsg" class="form-msg"></p>
+      </div>
+
+      <aside class="card company-box">
+        <h3 id="contactCompanyName">ProCode</h3>
+        <p id="contactAbout">متخصصون في برمجة حلول الأعمال وتطبيقات الويب وبرامج الكاشير.</p>
+        <p id="contactPhone">الهاتف: 01000000000</p>
+        <p id="contactEmail">البريد: info@procode.com</p>
+        <a href="index.html" class="btn btn-light">العودة للرئيسية</a>
+      </aside>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
