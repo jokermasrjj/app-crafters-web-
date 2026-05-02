@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة التحكم - ProCode</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <h2>لوحة التحكم</h2>
+      <button class="tab-btn active" data-tab="overviewTab">نظرة عامة</button>
+      <button class="tab-btn" data-tab="settingsTab">إعدادات الموقع</button>
+      <button class="tab-btn" data-tab="servicesTab">إدارة الخدمات</button>
+      <button class="tab-btn" data-tab="portfolioTab">إدارة الأعمال</button>
+      <button class="tab-btn" data-tab="downloadsTab">ملفات التحميل</button>
+      <button class="tab-btn" data-tab="messagesTab">رسائل العملاء</button>
+      <button class="tab-btn" data-tab="analyticsTab">تحليلات الزوار</button>
+      <a href="index.html" class="btn btn-light back-home">الرجوع للموقع</a>
+    </aside>
+
+    <main class="admin-main">
+      <section id="overviewTab" class="tab-content active">
+        <h3>إحصائيات سريعة</h3>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p>عدد الخدمات</p>
+            <h4 id="servicesCount">0</h4>
+          </article>
+          <article class="stat-card">
+            <p>عدد المشاريع</p>
+            <h4 id="portfolioCount">0</h4>
+          </article>
+          <article class="stat-card">
+            <p>ملفات التحميل</p>
+            <h4 id="downloadsCount">0</h4>
+          </article>
+          <article class="stat-card">
+            <p>رسائل العملاء</p>
+            <h4 id="messagesCount">0</h4>
+          </article>
+        </div>
+      </section>
+
+      <section id="settingsTab" class="tab-content">
+        <h3>بيانات الموقع</h3>
+        <form id="siteSettingsForm" class="admin-form">
+          <input type="text" id="siteName" placeholder="اسم الشركة" required />
+          <input type="text" id="siteBadge" placeholder="النص القصير الرئيسي" required />
+          <input type="text" id="siteHeroTitle" placeholder="العنوان الرئيسي" required />
+          <textarea id="siteHeroDesc" placeholder="وصف الصفحة الرئيسية" required></textarea>
+          <textarea id="siteAbout" placeholder="نبذة عن الشركة" required></textarea>
+          <input type="tel" id="sitePhone" placeholder="رقم الهاتف" required />
+          <input type="email" id="siteEmail" placeholder="البريد الالكتروني" required />
+          <button class="btn btn-primary" type="submit">حفظ البيانات</button>
+        </form>
+        <p id="settingsMsg" class="form-msg"></p>
+      </section>
+
+      <section id="servicesTab" class="tab-content">
+        <h3>إضافة خدمة</h3>
+        <form id="serviceForm" class="admin-form">
+          <input type="text" id="serviceTitle" placeholder="اسم الخدمة" required />
+          <textarea id="serviceDesc" placeholder="وصف الخدمة" required></textarea>
+          <button class="btn btn-primary" type="submit">حفظ الخدمة</button>
+        </form>
+        <div id="serviceList" class="admin-list"></div>
+      </section>
+
+      <section id="portfolioTab" class="tab-content">
+        <h3>إضافة عمل جديد</h3>
+        <form id="portfolioForm" class="admin-form">
+          <input type="text" id="portfolioTitle" placeholder="عنوان المشروع" required />
+          <textarea id="portfolioDesc" placeholder="وصف سريع للمشروع" required></textarea>
+          <input type="file" id="portfolioImage" accept="image/*" required />
+          <button class="btn btn-primary" type="submit">حفظ المشروع</button>
+        </form>
+        <div id="portfolioList" class="admin-list"></div>
+      </section>
+
+      <section id="downloadsTab" class="tab-content">
+        <h3>إدارة ملفات التحميل</h3>
+        <form id="downloadForm" class="admin-form">
+          <input type="text" id="downloadTitle" placeholder="عنوان الملف" required />
+          <textarea id="downloadDesc" placeholder="وصف الملف" required></textarea>
+          <input type="file" id="downloadFile" required />
+          <button class="btn btn-primary" type="submit">حفظ الملف</button>
+        </form>
+        <div id="downloadsList" class="admin-list"></div>
+      </section>
+
+      <section id="messagesTab" class="tab-content">
+        <h3>رسائل العملاء</h3>
+        <div id="messagesList" class="admin-list"></div>
+      </section>
+
+      <section id="analyticsTab" class="tab-content">
+        <div class="analytics-head">
+          <h3>تحليلات زوار الموقع</h3>
+          <button id="clearVisitsBtn" class="btn btn-outline" type="button">مسح بيانات الزيارات</button>
+        </div>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p>إجمالي الزيارات</p>
+            <h4 id="visitsCount">0</h4>
+          </article>
+          <article class="stat-card">
+            <p>أجهزة سطح المكتب</p>
+            <h4 id="desktopCount">0</h4>
+          </article>
+          <article class="stat-card">
+            <p>أجهزة الموبايل</p>
+            <h4 id="mobileCount">0</h4>
+          </article>
+        </div>
+        <div id="visitsList" class="visits-table-wrap"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
